@@ -1,187 +1,237 @@
 * {
-     font-family: 'Quicksand', sans-serif;
-     margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 10px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 10;
+ background-color: rgba(0, 0, 0, 0.7);
+ color: white;
+ padding: 10px 10px;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ position: absolute;
+ width: 100%;
+ top: 0;
+ z-index: 10;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 20px;
-    align-content: center;
+ list-style-type: none;
+ padding: 20px;
+ align-content: center;
 }
 
 .navbar ul li {
-    display: inline;
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+ display: inline;
+ margin: 0 15px;
+ color: white;
+ text-decoration: none;
+ cursor: pointer;
 }
 
 main{
-    background-color: #000000;
+ background-color: #000000;
+ padding-bottom: 20px;
 }
 
 .video-banner {
-    position: relative;
-    width: 100%;
-    height: 700px;
-    overflow: hidden;
+ position: relative;
+ width: 100%;
+ height: 700px;
+ overflow: hidden;
 }
 
 .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ z-index: 1;
 }
 
 .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.4);
+ z-index: 2;
 }
 
 .banner-conteudo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-.books-container{
-    padding: 2rem;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 3;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ text-align: center;
 }
 
 .books-container > h2{
-    color: #fff;
-    font-size: 30px;
-    margin: 6rem 0 2rem 2rem;
+ color: #fff;
+ font-size: 30px;
+ margin: 6rem 0 2rem 2rem;
 }
 
 .container {
-    padding: 20px;
-    display: flex;
-    gap: 10px;
+ padding: 0 20px 20px 20px;
+ display: flex;
+ gap: 10px;
 }
 
 .card {
+ position: relative;
+ overflow: hidden;
+ border-radius: 20px;
+ height: 40rem;
+ flex: 1;
+ transition: .3s all ease;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+.card img {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ top: 0;
+ left: 0;
+ transition: opacity 0.5s ease;
+ border-radius: 20px;
+ pointer-events: none;
+}
+
+.img-normal {
+ opacity: 1;
+ z-index: 1;
+}
+
+.img-hover {
+ opacity: 0;
+ z-index: 2;
+}
+
+.card:hover .img-hover {
+ opacity: 1;
+}
+
+.card:hover .img-normal{
+ opacity: 0;
+}
+
+.card-text, .card-info {
+ position: absolute;
+ z-index: 3;
+ color: white;
+ font-size: 18px;
+ text-align: center;
+ padding: 1rem;
+ background: rgba(0, 0, 0, 0.6);
+ width: 100%;
+ bottom: 0;
+ transition: opacity 0.3s ease;
+}
+
+.card:hover .card-text {
+ opacity: 0;
+}
+
+.book-status {
+ position: absolute;
+ top: 10px;
+ left: 10px;
+ background-color: rgba(255, 255, 255, 0.8);
+ color: #000;
+ font-weight: bold;
+ padding: 5px 10px;
+ border-radius: 10px;
+ z-index: 4;
+ font-size: 14px;
+ text-transform: uppercase;
+}
+
+.card-info {
+ opacity: 1;
+}
+
+.card:hover .card-info {
+ opacity: 0;
+}
+
+.booklist > h1 {
+    color: #fff;
+    margin: 6rem 2rem 4rem 2rem;
+    font-size: 30px;
+}
+
+.shelf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.book-card {
+    background-size: cover;
+    background-position: center;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
-    height: 40rem;
+    border-radius: 10px;
+    height: 30rem;
     flex: 1;
     transition: .3s all ease;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .card2 {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    height: 15rem;
-    flex: 1;
-    transition: .3s all ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .card img {
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-info {
     position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease;
-    border-radius: 20px;
-    pointer-events: none;
-  }
+    padding: 20px;
+    padding-left: 30px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
 
-  .card2 img {
+.book-card:hover .book-info {
+    opacity: 1;
+}
+
+.status-tag {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease;
-    border-radius: 20px;
-    pointer-events: none;
-  }
-  
-  .img-normal {
-    opacity: 1;
-    z-index: 1;
-  }
-  
-  .img-hover {
-    opacity: 0;
-    z-index: 2;
-  }
-  
-  .card:hover .img-hover {
-    opacity: 1;
-  }
-  .card2:hover .img-hover {
-    opacity: 1;
-  }
-  
-  .card:hover .img-normal {
-    opacity: 0;
-  }
-
-  .card2:hover .img-normal {
-    opacity: 0;
-  }
-  
-  .card-text {
-    position: relative;
-    z-index: 3;
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    text-align: center;
-    padding: 0 10px;
-    transition: opacity 0.4s ease;
-  }
-  
-  .card:hover .card-text {
-    opacity: 0;
-  }
-  .card2:hover .card-text {
-    opacity: 0;
-  }
+    top: 10px;
+    left: 10px;
+    background: #ffc107;
+    padding: 3px 7px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #333;
+    font-weight: bold;
+}
 
 .rodape {
     background-color: #333;
